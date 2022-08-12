@@ -20,32 +20,6 @@ class SequentialRankTest extends TestCase
         ['red', 'yellow', 'blue'],
     ];
 
-    public function test_if_it_can_order_without_provided_order()
-    {
-        $expected = [
-            ['blue', 'yellow', 'red'],
-            ['red', 'yellow', 'blue'],
-            ['yellow', 'blue', 'red'],
-            ['yellow', 'red', 'blue'],
-        ];
-
-        $seqRank = new SequentialRank($this->array);
-        $results = $seqRank->orderBy(null);
-
-        self::assertEquals($expected, $results);
-
-        $expected = [
-            'blue-yellow-red',
-            'red-yellow-blue',
-            'yellow-blue-red',
-            'yellow-red-blue',
-        ];
-
-        $results = $seqRank->get();
-
-        self::assertEquals($expected, $results);
-    }
-
     public function test_if_it_can_order_by_array()
     {
         $expected = [
@@ -91,6 +65,32 @@ class SequentialRankTest extends TestCase
             '2-3-1',
             '3-1-2',
             '3-2-1',
+        ];
+
+        $results = $seqRank->get();
+
+        self::assertEquals($expected, $results);
+    }
+
+    public function test_if_it_can_order_without_provided_order()
+    {
+        $expected = [
+            ['blue', 'yellow', 'red'],
+            ['red', 'yellow', 'blue'],
+            ['yellow', 'blue', 'red'],
+            ['yellow', 'red', 'blue'],
+        ];
+
+        $seqRank = new SequentialRank($this->array);
+        $results = $seqRank->orderBy(null);
+
+        self::assertEquals($expected, $results);
+
+        $expected = [
+            'blue-yellow-red',
+            'red-yellow-blue',
+            'yellow-blue-red',
+            'yellow-red-blue',
         ];
 
         $results = $seqRank->get();

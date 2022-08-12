@@ -1,20 +1,20 @@
 {
     "name": "nickbeen/sequential-rank",
-    "description": "Simple algorithm for ordering results on sequence",
+    "description": "Simple ranking system for ordering results by sequence",
     "type": "library",
     "keywords": [
         "php",
-        "sequential-rank",
-        "order"
+        "ranking system",
+        "sequential rank"
     ],
     "homepage": "https://github.com/nickbeen/sequential-rank",
     "license": "MIT",
     "authors": [
         {
             "name": "Nick Been",
-            "role": "Developer",
             "email": "nick@nickbeen.nl",
-            "homepage": "https://nickbeen.nl"
+            "homepage": "https://nickbeen.nl",
+            "role": "Developer"
         }
     ],
     "require": {

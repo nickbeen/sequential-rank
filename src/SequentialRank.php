@@ -4,14 +4,14 @@ namespace NickBeen\SequentialRank;
 
 class SequentialRank
 {
-    public array|string|null $order = null;
+    private array|string|null $order = null;
 
-    public function __construct(public array $array)
+    public function __construct(private array $array)
     {
     }
 
     /**
-     * Order array by provided array or enum
+     * Order data by provided array or enumeration.
      */
     public function orderBy(array|string|null $order): array
     {
@@ -21,26 +21,21 @@ class SequentialRank
 
         $this->sort();
 
-        //return $this->get();
-        //print_r($this->array);
         return $this->array;
     }
 
     /**
-     * Convert array values to sequential ranks
+     * Convert array values to sequential ranks.
      */
     private function convertToOrder(): void
     {
         array_walk_recursive($this->array, function (&$array, $key, $type) {
             switch (true) {
-                //case empty($type):
-                //case is_null($type): @todo remove this?
-                //break;
                 case is_array($type):
                     $array = $type[$array];
                     break;
                 case enum_exists($type ?? ''):
-                    $array = $type::tryFrom($array)->order(); // @todo hardcode order()?
+                    $array = $type::tryFrom($array)->order();
                     break;
                 default:
                     break;
@@ -49,7 +44,7 @@ class SequentialRank
     }
 
     /**
-     * Sort array according to natural sort
+     * Sort array by natural sort with hyphened separations.
      */
     private function sort(): void
     {
@@ -62,7 +57,7 @@ class SequentialRank
     }
 
     /**
-     * Return array with processed sequential ranks
+     * Return array with Sequential Ranks.
      */
     public function get(): array
     {
