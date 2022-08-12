@@ -1,0 +1,44 @@
+{
+    "name": "nickbeen/sequential-rank",
+    "description": "Simple algorithm for ordering results on sequence",
+    "type": "library",
+    "keywords": [
+        "php",
+        "sequential-rank",
+        "order"
+    ],
+    "homepage": "https://github.com/nickbeen/sequential-rank",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nick Been",
+            "role": "Developer",
+            "email": "nick@nickbeen.nl",
+            "homepage": "https://nickbeen.nl"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NickBeen\\SequentialRank\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NickBeen\\SequentialRank\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "tests": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
