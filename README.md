@@ -1,7 +1,7 @@
 # Sequential Rank
 
 [![Latest version](https://img.shields.io/packagist/v/nickbeen/sequential-rank)](https://packagist.org/packages/nickbeen/sequential-rank)
-[![Build status](https://img.shields.io/github/workflow/status/nickbeen/sequential-rank/Run%20tests)](https://packagist.org/packages/nickbeen/sequential-rank)
+[![Build status](https://img.shields.io/github/actions/workflow/status/nickbeen/sequential-rank/run-tests.yml)](https://packagist.org/packages/nickbeen/sequential-rank)
 [![Total downloads](https://img.shields.io/packagist/dt/nickbeen/sequential-rank)](https://packagist.org/packages/nickbeen/sequential-rank)
 [![PHP Version](https://img.shields.io/packagist/php-v/nickbeen/sequential-rank)](https://packagist.org/packages/nickbeen/sequential-rank)
 [![License](https://img.shields.io/packagist/l/nickbeen/sequential-rank)](https://packagist.org/packages/nickbeen/sequential-rank)
