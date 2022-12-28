@@ -33,9 +33,11 @@ class SequentialRank
             switch (true) {
                 case is_array($type):
                     $array = $type[$array];
+
                     break;
                 case enum_exists($type ?? ''):
                     $array = $type::tryFrom($array)->order();
+
                     break;
                 default:
                     break;
