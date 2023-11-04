@@ -50,6 +50,11 @@ class SequentialRank
      */
     private function sort(): void
     {
+        // Don't bother sorting with a single element
+		if (count($this->array) <= 1) {
+			return;
+		}
+
         usort($this->array, function (array $a, array $b) {
             return strnatcmp(
                 implode('-', $a),
