@@ -4,10 +4,17 @@ namespace NickBeen\SequentialRank;
 
 class SequentialRank
 {
+    private array $array = [];
+
     private array|string|null $order = null;
 
-    public function __construct(private array $array)
+    public function __construct(array $array)
     {
+        if (count($array) > 1) {
+			$this->array[] = $array;
+		} else {
+			$this->array = $array;
+		}
     }
 
     /**
