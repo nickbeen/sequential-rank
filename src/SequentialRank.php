@@ -11,10 +11,10 @@ class SequentialRank
     public function __construct(array $array)
     {
         if (count($array) > 1) {
-			$this->array[] = $array;
-		} else {
-			$this->array = $array;
-		}
+            $this->array[] = $array;
+        } else {
+            $this->array = $array;
+        }
     }
 
     /**
@@ -58,9 +58,9 @@ class SequentialRank
     private function sort(): void
     {
         // Don't bother sorting with a single element
-		if (count($this->array) <= 1) {
-			return;
-		}
+        if (count($this->array) <= 1) {
+            return;
+        }
 
         usort($this->array, function (array $a, array $b) {
             return strnatcmp(
@@ -71,9 +71,9 @@ class SequentialRank
     }
 
     /**
-     * Return array with Sequential Ranks.
+     * Convert sorted array to Sequential Rank.
      */
-    public function get(): array
+    public function get(string $separator = '-'): array
     {
         $new_array = [];
 
@@ -84,7 +84,7 @@ class SequentialRank
                 $new_array_bit[] = $item;
             }
 
-            $new_array[] = implode('-', $new_array_bit);
+            $new_array[] = implode($separator, $new_array_bit);
         }
 
         return $new_array;
