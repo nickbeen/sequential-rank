@@ -2,7 +2,18 @@
 
 All notable changes to `sequential-rank` will be documented in this file.
 
-## [Unreleased](https://github.com/nickbeen/sequential-rank/compare/0.0.2...HEAD)
+## [Unreleased](https://github.com/nickbeen/sequential-rank/compare/0.1.0...HEAD)
+
+## [0.1.0](https://github.com/nickbeen/sequential-rank/compare/0.0.2...0.1.0) - 2023-11-11
+
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+### What's Changed
+
+#### Added
+
+- Allow customizing of separator for sequential ranks by @nickbeen in https://github.com/nickbeen/sequential-rank/pull/4
+
+**Full Changelog**: https://github.com/nickbeen/sequential-rank/compare/0.0.2...0.1.0
 
 ## [0.0.2](https://github.com/nickbeen/sequential-rank/compare/0.0.1...0.0.2) - 2023-11-04
 
