@@ -71,9 +71,9 @@ class SequentialRank
     }
 
     /**
-     * Return array with Sequential Ranks.
+     * Convert sorted array to Sequential Rank.
      */
-    public function get(): array
+    public function get(string $separator = '-'): array
     {
         $new_array = [];
 
@@ -84,7 +84,7 @@ class SequentialRank
                 $new_array_bit[] = $item;
             }
 
-            $new_array[] = implode('-', $new_array_bit);
+            $new_array[] = implode($separator, $new_array_bit);
         }
 
         return $new_array;
